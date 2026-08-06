@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <h1>Order Confirmed</h1>
+    <p>Hi {{firstName}},</p>
+    <p>Your order <strong>{{orderNumber}}</strong> has been confirmed.</p>
+    <p>Total: {{total}}</p>
+    {{#if items}}
+      <h2>Order items</h2>
+      <ul>
+        {{#each items}}
+          <li>{{quantity}} × {{name}} — {{price}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <p>We’ll notify you when it ships.</p>
+  </body>
+</html>
